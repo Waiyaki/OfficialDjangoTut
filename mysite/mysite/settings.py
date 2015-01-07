@@ -15,6 +15,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 print("\nBASE_DIR: {}\n".format(BASE_DIR))
 print("DB path: {}\n".format(os.path.join(BASE_DIR, 'polls.db')))
 print("SETTINGS_DIR: {}\n".format(BASE_DIR))
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
@@ -113,17 +114,13 @@ MEDIA_URL = ''
 # url to redirect not logged in users to.
 LOGIN_URL = ''
 
-# List of callables that know how to import templates from various sources.
-TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.load_template_source',
-    'django.template.loaders.app_directories.load_template_source',
-#     'django.template.loaders.eggs.load_template_source',
-)
-
+TEMPLATE_PATH = os.path.join(BASE_DIR, 'templates')
+print("TEMPLATE_DIRS: {}".format(TEMPLATE_PATH))
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    TEMPLATE_PATH,
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
