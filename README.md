@@ -1,2 +1,1 @@
-# mysite
-Django official tutorial for beginners.
+Django official polls tutorial for beginners -- tutorial workthrough code.
