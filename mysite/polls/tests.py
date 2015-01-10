@@ -118,7 +118,7 @@ class QuestionView(TestCase):
     def test_index_view_each_returned_question_has_choice(self):
         """
         The questions displayed in the index view should only be the ones
-        that have an associated choice(s).
+        that have (an) associated choice(s).
         """
         with_choice = create_question(question_text="What's my choice?", days=-1)
         with_choice.choice_set.create(choice_text="Me.")
